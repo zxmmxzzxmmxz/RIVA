@@ -38,50 +38,51 @@ class AlarmViewController: UIViewController {
     /////////////////////////////////////////////////////////////////////////////////////////////
     @IBAction func setAlarm(segue:UIStoryboardSegue){
         let source = segue.sourceViewController as! SetUpAlarmViewController
-        alarmDate = source.returnselectedDate()
-        
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "HH"
-        if(formatter.stringFromDate(alarmDate).toInt()!<12){
-            formatter.dateFormat="HH:mm"
-            alarmLabel.text=formatter.stringFromDate(alarmDate)+"AM"
-        }
-        else{
-            formatter.dateFormat="HH"
-            var hour=formatter.stringFromDate(alarmDate).toInt()!-12
-            if(hour==0){
-                hour=12
+        self.alarmactive = source.alarmisset
+        if(alarmactive){
+            alarmDate = source.returnselectedDate()
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "HH"
+            if(formatter.stringFromDate(alarmDate).toInt()!<12){
+                formatter.dateFormat="HH:mm"
+                alarmLabel.text=formatter.stringFromDate(alarmDate)+"AM"
             }
-            formatter.dateFormat="mm"
-            alarmLabel.text=String(hour)+":"+formatter.stringFromDate(alarmDate)+"PM"
-        }
-        //retreive and set alarmlabel
+            else{
+                formatter.dateFormat="HH"
+                var hour=formatter.stringFromDate(alarmDate).toInt()!-12
+                if(hour==0){
+                    hour=12
+                }
+                formatter.dateFormat="mm"
+                alarmLabel.text=String(hour)+":"+formatter.stringFromDate(alarmDate)+"PM"
+            }
+            //retreive and set alarmlabel
         
-        musicTitle=source.selectedMusicTitle()
-        var path = NSBundle.mainBundle().URLForResource(musicTitle, withExtension: "mp3")
-        var error:NSError?
-        audioPlayer = AVAudioPlayer(contentsOfURL: path!, error: &error)
-        if(error==nil){
-            audioPlayer.prepareToPlay()
-        }
-        //initial music player
+            musicTitle=source.selectedMusicTitle()
+            var path = NSBundle.mainBundle().URLForResource(musicTitle, withExtension: "mp3")
+            var error:NSError?
+            audioPlayer = AVAudioPlayer(contentsOfURL: path!, error: &error)
+            if(error==nil){
+                audioPlayer.prepareToPlay()
+            }
+            //initial music player
         
-        messageLabel.text=message
-        //set message label
-        
-        formatter.dateFormat="ss"
-        let tempsec = formatter.stringFromDate(alarmDate).toInt()!
-        alarmDate=alarmDate.dateByAddingTimeInterval(Double(-tempsec))
-        //set alarm date
+            messageLabel.text=message
+            //set message label
+            
+            formatter.dateFormat="ss"
+            let tempsec = formatter.stringFromDate(alarmDate).toInt()!
+            alarmDate=alarmDate.dateByAddingTimeInterval(Double(-tempsec))
+            //set alarm date
 
-        if(healthManager.ifhealthkitavailable()){
-            NSTimer.scheduledTimerWithTimeInterval(1800, target: self, selector: "initheartrate", userInfo: nil, repeats: false)
-            if(healthManager.getLatestHeartRateInHalfHour() != nil){
-                    self.heartbutton.setImage(UIImage(named: "redheart.ico"), forState: .Normal)
+            if(healthManager.ifhealthkitavailable()){
+                NSTimer.scheduledTimerWithTimeInterval(1800, target: self, selector: "initheartrate", userInfo: nil, repeats: false)
+                if(healthManager.getLatestHeartRateInHalfHour() != nil){
+                    self.heartbutton.hidden = false
+                }
             }
+            analogClockView.setNeedsDisplay()
         }
-        alarmactive=true
-        analogClockView.setNeedsDisplay()
     }
     
 
@@ -107,7 +108,6 @@ class AlarmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setclockbutton.backgroundColor = UIColor.blackColor()
         healthManager.authorizeHealthKit()
         if(healthManager.ifhealthkitavailable()){
             healthManager.setInitHeartRate()
@@ -118,6 +118,7 @@ class AlarmViewController: UIViewController {
         audioPlayer = AVAudioPlayer(contentsOfURL: path!, error: &error)
         audioPlayer.prepareToPlay()
         messageLabel.text=""
+        heartbutton.hidden = true
         //print("here3")
     }
     
@@ -192,7 +193,7 @@ class AlarmViewController: UIViewController {
         messageLabel.text=""
         alarmLabel.text="--:--"
         alarmactive=false
-        heartbutton.setImage(UIImage(named: "greyheart"), forState: .Normal)
+        heartbutton.hidden = true
     }
 
 
@@ -224,7 +225,7 @@ class AlarmViewController: UIViewController {
         self.presentViewController(alertController, animated: true, completion:nil)
         audioPlayer.play()
         alarmDate = NSDate(timeInterval: -90, sinceDate: NSDate())
-        heartbutton.setImage(UIImage(named: "greyheart"), forState: .Normal)
+        heartbutton.hidden = true
     }
 }
 

@@ -17,7 +17,7 @@ class SetUpAlarmViewController: UIViewController,UIPickerViewDataSource,UIPicker
     
     let musicList = ["Summer","Whistle","Truth","Phantom","Dogs"]
     var musicTitle = "Summer"
-    
+    var alarmisset = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +49,10 @@ class SetUpAlarmViewController: UIViewController,UIPickerViewDataSource,UIPicker
     
     func selectedMusicTitle()-> String{
         return musicTitle
+    }
+    @IBAction func setalarm(sender: AnyObject) {
+        self.alarmisset = true
+        self.performSegueWithIdentifier("setAlarm", sender: self)
     }
     
     /*

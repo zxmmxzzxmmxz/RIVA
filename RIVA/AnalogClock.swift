@@ -76,7 +76,7 @@ class AnalogClock: UIView {
         case two = 2, four = 4, twelve = 12
     }
     
-    func drawText(#rect:CGRect, #ctx:CGContextRef, #x:CGFloat, #y:CGFloat, #radius:CGFloat, #sides:NumberOfNumerals, #color:UIColor) {
+    func drawText(#rect:CGRect, ctx:CGContextRef, x:CGFloat, y:CGFloat, radius:CGFloat, sides:NumberOfNumerals, color:UIColor) {
     
         CGContextTranslateCTM(ctx, 0.0, CGRectGetHeight(rect))
         CGContextScaleCTM(ctx, 1.0, -1.0)
@@ -93,7 +93,7 @@ class AnalogClock: UIView {
                 // Font name must be written exactly the same as the system stores it (some names are hyphenated, some aren't) and must exist on the user's device. Otherwise there will be a crash. (In real use checks and fallbacks would be created.) For a list of iOS 7 fonts see here: http://support.apple.com/en-us/ht5878
                 let aFont = UIFont(name: "DamascusBold", size: radius/5)
                 // create a dictionary of attributes to be applied to the string
-                let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.whiteColor()]
+                let attr:CFDictionaryRef = [NSFontAttributeName:aFont!,NSForegroundColorAttributeName:UIColor.blackColor()]
                 // create the attributed string
                 let str = String(p.index*multiplier)
                 let text = CFAttributedStringCreate(nil, str, attr)
@@ -115,7 +115,7 @@ class AnalogClock: UIView {
             }
         }
     }
-    func secondMarkers(#ctx:CGContextRef, #x:CGFloat, #y:CGFloat, #radius:CGFloat, #sides:Int, #color:UIColor) {
+    func secondMarkers(#ctx:CGContextRef, x:CGFloat, y:CGFloat, radius:CGFloat, sides:Int, color:UIColor) {
         // retrieve points
         let points = circleCircumferencePoints(sides,x: x,y: y,radius: radius)
         // create path
@@ -185,7 +185,7 @@ class AnalogClock: UIView {
         // add the circle to the context
         CGContextAddArc(ctx, CGRectGetMidX(rect), CGRectGetMidY(rect), rad, 0, endAngle, 1)
         // set fill color
-        CGContextSetFillColorWithColor(ctx,UIColor.blackColor().CGColor)
+        CGContextSetFillColorWithColor(ctx,UIColor.lightGrayColor().CGColor)
         // set stroke color
         CGContextSetStrokeColorWithColor(ctx,UIColor.blackColor().CGColor)
         // set line width
@@ -213,6 +213,7 @@ class AnalogClock: UIView {
         let realsecondarc = Float(second)/60
         let secondx = CGRectGetMidX(rect) + 70 * sin(degree2radian(360) * CGFloat(realsecondarc))
         let secondy = CGRectGetMidY(rect) - 70 * cos(degree2radian(360) * CGFloat(realsecondarc))
+        
         // create hour layer
         let hourLayer = CAShapeLayer()
         hourLayer.frame = rect
@@ -221,9 +222,10 @@ class AnalogClock: UIView {
         hourpath.addLineToPoint(CGPoint(x: hourx, y: houry))
         hourLayer.path = hourpath.CGPath
         hourLayer.lineWidth = 4
-        hourLayer.strokeColor = UIColor.whiteColor().CGColor
+        hourLayer.strokeColor = UIColor.blackColor().CGColor
         self.layer.addSublayer(hourLayer)
         rotateLayer(hourLayer, dur: 43200)
+        
         // create minute layer
         let minLayer = CAShapeLayer()
         minLayer.frame = rect
@@ -232,9 +234,10 @@ class AnalogClock: UIView {
         minpath.addLineToPoint(CGPoint(x: minx, y: miny))
         minLayer.path = minpath.CGPath
         minLayer.lineWidth = 2
-        minLayer.strokeColor = UIColor.whiteColor().CGColor
+        minLayer.strokeColor = UIColor.blackColor().CGColor
         self.layer.addSublayer(minLayer)
         rotateLayer(minLayer, dur: 3600)
+        
         // create second layer
         let secondLayer = CAShapeLayer()
         secondLayer.frame = rect
@@ -243,7 +246,7 @@ class AnalogClock: UIView {
         secondpath.addLineToPoint(CGPoint(x: secondx, y: secondy))
         secondLayer.path = secondpath.CGPath
         secondLayer.lineWidth = 1
-        secondLayer.strokeColor = UIColor.whiteColor().CGColor
+        secondLayer.strokeColor = UIColor.blackColor().CGColor
         self.layer.addSublayer(secondLayer)
         rotateLayer(secondLayer, dur: 60)
         
@@ -254,11 +257,11 @@ class AnalogClock: UIView {
         dotpath.addArcWithCenter(CGPoint(x:CGRectGetMidX(rect),y:CGRectGetMidY(rect)), radius: 2, startAngle: 0, endAngle: CGFloat(2*M_PI), clockwise: true)
         dot.path=dotpath.CGPath
         dot.lineWidth=5
-        dot.strokeColor=UIColor.whiteColor().CGColor
+        dot.strokeColor=UIColor.blackColor().CGColor
         self.layer.addSublayer(dot)
         
-        drawText(rect:rect, ctx: ctx, x: CGRectGetMidX(rect), y: CGRectGetMidY(rect), radius: rad, sides: .twelve, color: UIColor.whiteColor())
-        secondMarkers(ctx: ctx, x: CGRectGetMidX(rect), y: CGRectGetMidY(rect), radius: rad, sides: 60, color: UIColor.whiteColor())
+        drawText(rect:rect, ctx: ctx, x: CGRectGetMidX(rect), y: CGRectGetMidY(rect), radius: rad, sides: .twelve, color: UIColor.blackColor())
+        secondMarkers(ctx: ctx, x: CGRectGetMidX(rect), y: CGRectGetMidY(rect), radius: rad, sides: 60, color: UIColor.blackColor())
         
     }
     

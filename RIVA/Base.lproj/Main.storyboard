@@ -66,12 +66,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="Settings-50" id="cPa-gy-q4n"/>
                     <connections>
-                        <segue destination="RbW-Hn-2kb" kind="show" identifier="gotoLogin" id="Z38-AA-U8f"/>
+                        <segue destination="QV4-W1-4hl" kind="unwind" identifier="signout" unwindAction="goBackToLogin:" id="RxT-DE-GHl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <exit id="QV4-W1-4hl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="282" y="-332"/>
+            <point key="canvasLocation" x="287" y="-181"/>
         </scene>
         <!--Log IN-->
         <scene sceneID="jVO-ZR-CHh">
@@ -300,18 +301,9 @@
                                     <constraint firstAttribute="width" secondItem="dNt-02-sb7" secondAttribute="height" multiplier="8:7" id="5pp-Rw-bJi"/>
                                     <constraint firstAttribute="width" constant="64" id="hvl-s4-6XY"/>
                                 </constraints>
-                                <state key="normal" image="greyheart">
+                                <state key="normal" image="redheart.ico">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEG-pF-AhT">
-                                <rect key="frame" x="211" y="485" width="58" height="58"/>
-                                <state key="normal" image="cancc.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancel:" destination="dRG-dc-jDC" eventType="touchUpInside" id="nwJ-7D-Bzh"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--:--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="500-Zp-qDD">
                                 <rect key="frame" x="552" y="28" width="32" height="21"/>
@@ -333,8 +325,8 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJr-n3-O2D">
-                                <rect key="frame" x="331" y="485" width="58" height="58"/>
-                                <state key="normal" image="clo.png"/>
+                                <rect key="frame" x="268" y="479" width="64" height="64"/>
+                                <state key="normal" image="timer.png"/>
                                 <connections>
                                     <action selector="settingAlarm:" destination="dRG-dc-jDC" eventType="touchUpInside" id="13U-ay-Pp3"/>
                                 </connections>
@@ -345,20 +337,31 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEG-pF-AhT">
+                                <rect key="frame" x="526" y="46" width="58" height="58"/>
+                                <state key="normal" image="Icon-60.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="dRG-dc-jDC" eventType="touchUpInside" id="nwJ-7D-Bzh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hpx-Lu-mDc" firstAttribute="top" secondItem="fEG-pF-AhT" secondAttribute="bottom" constant="8" symbolic="YES" id="0Xz-Rv-E2k"/>
                             <constraint firstItem="dNt-02-sb7" firstAttribute="leading" secondItem="P9H-dm-WhH" secondAttribute="leadingMargin" id="1HR-N3-32f"/>
-                            <constraint firstAttribute="centerX" secondItem="EJr-n3-O2D" secondAttribute="centerX" constant="-60" id="27w-XD-Qmc"/>
+                            <constraint firstAttribute="centerX" secondItem="EJr-n3-O2D" secondAttribute="centerX" id="27w-XD-Qmc"/>
                             <constraint firstItem="3vv-ji-G8h" firstAttribute="top" secondItem="jQ6-Sn-9Fv" secondAttribute="bottom" constant="8" symbolic="YES" id="2pT-ZF-sp4"/>
                             <constraint firstItem="jQ6-Sn-9Fv" firstAttribute="top" secondItem="dNt-02-sb7" secondAttribute="bottom" constant="8" symbolic="YES" id="5u6-uG-afL"/>
                             <constraint firstItem="500-Zp-qDD" firstAttribute="leading" secondItem="DKL-b8-mUm" secondAttribute="trailing" constant="8" symbolic="YES" id="Bwh-uZ-EHa"/>
                             <constraint firstItem="dNt-02-sb7" firstAttribute="top" secondItem="uRH-lN-uun" secondAttribute="bottom" constant="8" symbolic="YES" id="EeF-0v-dgC"/>
                             <constraint firstAttribute="centerX" secondItem="jQ6-Sn-9Fv" secondAttribute="centerX" id="F6o-8f-c9g"/>
                             <constraint firstAttribute="centerX" secondItem="3vv-ji-G8h" secondAttribute="centerX" id="FnC-GX-v4R"/>
+                            <constraint firstItem="fEG-pF-AhT" firstAttribute="top" secondItem="500-Zp-qDD" secondAttribute="bottom" constant="8" symbolic="YES" id="P18-zZ-LNY"/>
                             <constraint firstItem="DKL-b8-mUm" firstAttribute="top" secondItem="uRH-lN-uun" secondAttribute="bottom" constant="8" symbolic="YES" id="Y7B-S3-x4G"/>
                             <constraint firstItem="jQ6-Sn-9Fv" firstAttribute="trailing" secondItem="P9H-dm-WhH" secondAttribute="trailingMargin" id="bgc-Q2-tA5"/>
+                            <constraint firstItem="fEG-pF-AhT" firstAttribute="trailing" secondItem="P9H-dm-WhH" secondAttribute="trailingMargin" id="dZY-Rb-YNb"/>
                             <constraint firstItem="500-Zp-qDD" firstAttribute="top" secondItem="uRH-lN-uun" secondAttribute="bottom" constant="8" symbolic="YES" id="lKx-5f-mct"/>
                             <constraint firstItem="jQ6-Sn-9Fv" firstAttribute="leading" secondItem="P9H-dm-WhH" secondAttribute="leadingMargin" id="pry-Rt-X3A"/>
                             <constraint firstItem="hpx-Lu-mDc" firstAttribute="top" secondItem="EJr-n3-O2D" secondAttribute="bottom" constant="8" id="qlj-f2-OTn"/>
@@ -369,10 +372,12 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="qmo-aG-m8c"/>
+                                <exclude reference="wrW-ml-OCD"/>
+                                <exclude reference="0Xz-Rv-E2k"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Alarm" image="second" selectedImage="second" id="CIH-24-xkn"/>
+                    <tabBarItem key="tabBarItem" title="Alarm" image="Sleeping in Bed-50" id="CIH-24-xkn"/>
                     <navigationItem key="navigationItem" title="ToMorning" id="XMm-KB-19i"/>
                     <connections>
                         <outlet property="alarmLabel" destination="500-Zp-qDD" id="X6c-ut-DIu"/>
@@ -436,53 +441,68 @@
                                 </variation>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="300" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="600" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E4-Hu-VvK">
-                                <rect key="frame" x="159" y="423" width="58" height="58"/>
-                                <state key="normal" image="okok.png">
+                                <rect key="frame" x="172" y="495" width="32" height="32"/>
+                                <state key="normal" image="check.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XtT-7q-WlC" kind="unwind" unwindAction="setAlarm:" id="fQk-ht-aGn"/>
+                                    <action selector="setalarm:" destination="kaX-Kp-5gf" eventType="touchUpInside" id="LIA-FN-a1i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAr-3n-M95">
+                                <rect key="frame" x="16" y="28" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XtT-7q-WlC" kind="unwind" unwindAction="setAlarm:" id="q5l-1E-yn8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ZAr-3n-M95" firstAttribute="bottom" secondItem="13p-Cd-L7n" secondAttribute="top" constant="16" id="3Nh-jV-PoZ"/>
                             <constraint firstItem="ncm-sR-nsg" firstAttribute="top" secondItem="DLZ-q0-ZRQ" secondAttribute="bottom" constant="18" id="ESY-jJ-jZ9"/>
                             <constraint firstAttribute="centerX" secondItem="pJa-Cr-6R4" secondAttribute="centerX" id="HHS-NK-hNS"/>
                             <constraint firstAttribute="centerX" secondItem="ncm-sR-nsg" secondAttribute="centerX" id="IM4-QG-e2d"/>
                             <constraint firstItem="unu-jG-l6o" firstAttribute="top" secondItem="ncm-sR-nsg" secondAttribute="bottom" constant="20" id="Lr6-d3-V0i"/>
                             <constraint firstItem="DLZ-q0-ZRQ" firstAttribute="top" secondItem="13p-Cd-L7n" secondAttribute="bottom" constant="33" id="Ou3-qF-Nbz"/>
-                            <constraint firstItem="6E4-Hu-VvK" firstAttribute="top" secondItem="pJa-Cr-6R4" secondAttribute="bottom" priority="900" constant="8" symbolic="YES" id="RB6-uq-fza"/>
+                            <constraint firstItem="6E4-Hu-VvK" firstAttribute="top" secondItem="pJa-Cr-6R4" secondAttribute="bottom" priority="900" constant="80" id="RB6-uq-fza"/>
+                            <constraint firstItem="ZAr-3n-M95" firstAttribute="top" secondItem="13p-Cd-L7n" secondAttribute="bottom" constant="8" symbolic="YES" id="RGh-rr-O1J"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ncm-sR-nsg" secondAttribute="trailing" constant="20" id="V96-rd-Wvk"/>
+                            <constraint firstItem="ZAr-3n-M95" firstAttribute="leading" secondItem="F19-qV-Y0C" secondAttribute="leadingMargin" id="VHd-WK-X01"/>
                             <constraint firstItem="pJa-Cr-6R4" firstAttribute="top" secondItem="unu-jG-l6o" secondAttribute="bottom" constant="8" symbolic="YES" id="azO-sM-y2j"/>
                             <constraint firstAttribute="centerX" secondItem="DLZ-q0-ZRQ" secondAttribute="centerX" id="dhC-Yt-BFd"/>
                             <constraint firstAttribute="centerX" secondItem="6E4-Hu-VvK" secondAttribute="centerX" id="fEZ-FI-NuV"/>
                             <constraint firstItem="ncm-sR-nsg" firstAttribute="leading" secondItem="F19-qV-Y0C" secondAttribute="leadingMargin" constant="20" id="qmI-mB-Da1"/>
                             <constraint firstAttribute="centerX" secondItem="unu-jG-l6o" secondAttribute="centerX" id="xdJ-CA-bCa"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3Nh-jV-PoZ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="datePicker" destination="ncm-sR-nsg" id="sgk-JL-3ie"/>
                         <outlet property="musicTab" destination="pJa-Cr-6R4" id="TxC-dB-DvF"/>
+                        <segue destination="XtT-7q-WlC" kind="unwind" identifier="setAlarm" unwindAction="setAlarm:" id="FWl-0D-5fy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k84-lB-heb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="XtT-7q-WlC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1594.5" y="-476.5"/>
+            <point key="canvasLocation" x="1589.5" y="-461.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Icon-60.png" width="60" height="60"/>
         <image name="Pill Filled-50" width="25" height="25"/>
         <image name="Settings-50" width="25" height="25"/>
-        <image name="cancc.png" width="58" height="58"/>
-        <image name="clo.png" width="58" height="58"/>
-        <image name="greyheart" width="300" height="279"/>
-        <image name="okok.png" width="58" height="58"/>
-        <image name="second" width="30" height="30"/>
+        <image name="Sleeping in Bed-50" width="25" height="25"/>
+        <image name="check.png" width="32" height="32"/>
+        <image name="redheart.ico" width="256" height="256"/>
+        <image name="timer.png" width="64" height="64"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Z38-AA-U8f"/>
-    </inferredMetricsTieBreakers>
 </document>

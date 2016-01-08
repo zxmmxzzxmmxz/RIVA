@@ -45,6 +45,10 @@
 		C049B0901C40587600C0E2A9 /* Whistle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C049B0841C40587600C0E2A9 /* Whistle.mp3 */; };
 		C049B0911C40587600C0E2A9 /* clo.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B0851C40587600C0E2A9 /* clo.png */; };
 		C049B0921C40587600C0E2A9 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B0861C40587600C0E2A9 /* cancel.png */; };
+		C049B0941C40634000C0E2A9 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B0931C40634000C0E2A9 /* check.png */; };
+		C049B0961C40641100C0E2A9 /* timer.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B0951C40641100C0E2A9 /* timer.png */; };
+		C049B0981C40649000C0E2A9 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B0971C40649000C0E2A9 /* icon_close.png */; };
+		C049B09A1C40655C00C0E2A9 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B0991C40655C00C0E2A9 /* Icon-60@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +105,10 @@
 		C049B0841C40587600C0E2A9 /* Whistle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Whistle.mp3; sourceTree = "<group>"; };
 		C049B0851C40587600C0E2A9 /* clo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clo.png; sourceTree = "<group>"; };
 		C049B0861C40587600C0E2A9 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		C049B0931C40634000C0E2A9 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		C049B0951C40641100C0E2A9 /* timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer.png; sourceTree = "<group>"; };
+		C049B0971C40649000C0E2A9 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
+		C049B0991C40655C00C0E2A9 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,16 +179,20 @@
 		491469501C3F5504001C14A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C049B0991C40655C00C0E2A9 /* Icon-60@2x.png */,
 				C049B07B1C40587600C0E2A9 /* myPill.txt */,
 				C049B07C1C40587600C0E2A9 /* cancc.png */,
 				C049B07D1C40587600C0E2A9 /* redheart.ico */,
+				C049B0931C40634000C0E2A9 /* check.png */,
 				C049B07E1C40587600C0E2A9 /* okok.png */,
 				C049B07F1C40587600C0E2A9 /* greyheart.png */,
 				C049B0801C40587600C0E2A9 /* Dogs.mp3 */,
 				C049B0811C40587600C0E2A9 /* Phantom.mp3 */,
+				C049B0971C40649000C0E2A9 /* icon_close.png */,
 				C049B0821C40587600C0E2A9 /* Summer.mp3 */,
 				C049B0831C40587600C0E2A9 /* Truth.mp3 */,
 				C049B0841C40587600C0E2A9 /* Whistle.mp3 */,
+				C049B0951C40641100C0E2A9 /* timer.png */,
 				C049B0851C40587600C0E2A9 /* clo.png */,
 				C049B0861C40587600C0E2A9 /* cancel.png */,
 				4966C1151C3F810500F62F7A /* UIViewControllerExtension.swift */,
@@ -339,16 +351,20 @@
 				C049B08D1C40587600C0E2A9 /* Phantom.mp3 in Resources */,
 				C049B0921C40587600C0E2A9 /* cancel.png in Resources */,
 				4914695A1C3F5504001C14A2 /* Main.storyboard in Resources */,
+				C049B0941C40634000C0E2A9 /* check.png in Resources */,
 				C049B0911C40587600C0E2A9 /* clo.png in Resources */,
 				C049B08A1C40587600C0E2A9 /* okok.png in Resources */,
 				C049B08B1C40587600C0E2A9 /* greyheart.png in Resources */,
 				C049B0901C40587600C0E2A9 /* Whistle.mp3 in Resources */,
+				C049B0961C40641100C0E2A9 /* timer.png in Resources */,
 				C049B08F1C40587600C0E2A9 /* Truth.mp3 in Resources */,
 				4914695F1C3F5504001C14A2 /* LaunchScreen.xib in Resources */,
 				4914695C1C3F5504001C14A2 /* Images.xcassets in Resources */,
 				C049B0881C40587600C0E2A9 /* cancc.png in Resources */,
 				C049B0871C40587600C0E2A9 /* myPill.txt in Resources */,
 				C049B08E1C40587600C0E2A9 /* Summer.mp3 in Resources */,
+				C049B09A1C40655C00C0E2A9 /* Icon-60@2x.png in Resources */,
+				C049B0981C40649000C0E2A9 /* icon_close.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

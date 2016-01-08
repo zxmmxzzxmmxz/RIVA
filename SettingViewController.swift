@@ -22,7 +22,8 @@ class SettingViewController: UIViewController {
         // logout button
         var okAction = UIAlertAction(title: "OK", style: .Default, handler: ({ action -> Void in
             PFUser.logOut()
-            self.performSegueWithIdentifier("gotoLogin", sender: nil)
+            self.performSegueWithIdentifier("signout", sender: self)
+            
         }))
         // cancel button
         var cancelAction = UIAlertAction(title: "Cancel", style: .Cancel){ action -> Void in

@@ -31,6 +31,10 @@ class LogInViewController: UIViewController, UITextFieldDelegate{
     var actInd:UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
     
     
+    @IBAction func goBackToLogin(segue:UIStoryboardSegue){
+    
+    }
+    
     // MARK: - LogIn action
     @IBAction func logInTapped(sender: UIButton) {
         
