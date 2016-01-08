@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		491469531C3F5504001C14A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491469521C3F5504001C14A2 /* AppDelegate.swift */; };
-		491469551C3F5504001C14A2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491469541C3F5504001C14A2 /* FirstViewController.swift */; };
 		4914695A1C3F5504001C14A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491469581C3F5504001C14A2 /* Main.storyboard */; };
 		4914695C1C3F5504001C14A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4914695B1C3F5504001C14A2 /* Images.xcassets */; };
 		4914695F1C3F5504001C14A2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4914695D1C3F5504001C14A2 /* LaunchScreen.xib */; };
@@ -29,6 +28,23 @@
 		4966C10F1C3F6D2C00F62F7A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4966C10E1C3F6D2C00F62F7A /* libz.dylib */; };
 		4966C1111C3F6D3D00F62F7A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4966C1101C3F6D3D00F62F7A /* libsqlite3.dylib */; };
 		4966C1161C3F810500F62F7A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4966C1151C3F810500F62F7A /* UIViewControllerExtension.swift */; };
+		C049B0711C40576000C0E2A9 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = C049B0701C40576000C0E2A9 /* Report.swift */; };
+		C049B0731C40576D00C0E2A9 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C049B0721C40576D00C0E2A9 /* HealthManager.swift */; };
+		C049B0761C40578E00C0E2A9 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C049B0741C40578E00C0E2A9 /* AlarmViewController.swift */; };
+		C049B0771C40578E00C0E2A9 /* SetUpAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C049B0751C40578E00C0E2A9 /* SetUpAlarmViewController.swift */; };
+		C049B07A1C40579E00C0E2A9 /* AnalogClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C049B0791C40579E00C0E2A9 /* AnalogClock.swift */; };
+		C049B0871C40587600C0E2A9 /* myPill.txt in Resources */ = {isa = PBXBuildFile; fileRef = C049B07B1C40587600C0E2A9 /* myPill.txt */; };
+		C049B0881C40587600C0E2A9 /* cancc.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B07C1C40587600C0E2A9 /* cancc.png */; };
+		C049B0891C40587600C0E2A9 /* redheart.ico in Resources */ = {isa = PBXBuildFile; fileRef = C049B07D1C40587600C0E2A9 /* redheart.ico */; };
+		C049B08A1C40587600C0E2A9 /* okok.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B07E1C40587600C0E2A9 /* okok.png */; };
+		C049B08B1C40587600C0E2A9 /* greyheart.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B07F1C40587600C0E2A9 /* greyheart.png */; };
+		C049B08C1C40587600C0E2A9 /* Dogs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C049B0801C40587600C0E2A9 /* Dogs.mp3 */; };
+		C049B08D1C40587600C0E2A9 /* Phantom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C049B0811C40587600C0E2A9 /* Phantom.mp3 */; };
+		C049B08E1C40587600C0E2A9 /* Summer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C049B0821C40587600C0E2A9 /* Summer.mp3 */; };
+		C049B08F1C40587600C0E2A9 /* Truth.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C049B0831C40587600C0E2A9 /* Truth.mp3 */; };
+		C049B0901C40587600C0E2A9 /* Whistle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C049B0841C40587600C0E2A9 /* Whistle.mp3 */; };
+		C049B0911C40587600C0E2A9 /* clo.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B0851C40587600C0E2A9 /* clo.png */; };
+		C049B0921C40587600C0E2A9 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B0861C40587600C0E2A9 /* cancel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +61,6 @@
 		4914694D1C3F5504001C14A2 /* RIVA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIVA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		491469511C3F5504001C14A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491469521C3F5504001C14A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		491469541C3F5504001C14A2 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		491469591C3F5504001C14A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4914695B1C3F5504001C14A2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4914695E1C3F5504001C14A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -69,6 +84,23 @@
 		4966C1101C3F6D3D00F62F7A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		4966C1121C3F6E9000F62F7A /* RIVA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RIVA-Bridging-Header.h"; sourceTree = "<group>"; };
 		4966C1151C3F810500F62F7A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		C049B0701C40576000C0E2A9 /* Report.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		C049B0721C40576D00C0E2A9 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		C049B0741C40578E00C0E2A9 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		C049B0751C40578E00C0E2A9 /* SetUpAlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetUpAlarmViewController.swift; sourceTree = "<group>"; };
+		C049B0791C40579E00C0E2A9 /* AnalogClock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalogClock.swift; sourceTree = "<group>"; };
+		C049B07B1C40587600C0E2A9 /* myPill.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = myPill.txt; sourceTree = "<group>"; };
+		C049B07C1C40587600C0E2A9 /* cancc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancc.png; sourceTree = "<group>"; };
+		C049B07D1C40587600C0E2A9 /* redheart.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = redheart.ico; sourceTree = "<group>"; };
+		C049B07E1C40587600C0E2A9 /* okok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = okok.png; sourceTree = "<group>"; };
+		C049B07F1C40587600C0E2A9 /* greyheart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greyheart.png; sourceTree = "<group>"; };
+		C049B0801C40587600C0E2A9 /* Dogs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Dogs.mp3; sourceTree = "<group>"; };
+		C049B0811C40587600C0E2A9 /* Phantom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Phantom.mp3; sourceTree = "<group>"; };
+		C049B0821C40587600C0E2A9 /* Summer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Summer.mp3; sourceTree = "<group>"; };
+		C049B0831C40587600C0E2A9 /* Truth.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Truth.mp3; sourceTree = "<group>"; };
+		C049B0841C40587600C0E2A9 /* Whistle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Whistle.mp3; sourceTree = "<group>"; };
+		C049B0851C40587600C0E2A9 /* clo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clo.png; sourceTree = "<group>"; };
+		C049B0861C40587600C0E2A9 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,12 +154,14 @@
 		4914694F1C3F5504001C14A2 /* RIVA */ = {
 			isa = PBXGroup;
 			children = (
-				4966C0FD1C3F6CC200F62F7A /* Framework */,
+				C049B06F1C40575300C0E2A9 /* Models */,
+				C049B0781C40579500C0E2A9 /* View */,
 				491469741C3F6A2B001C14A2 /* Controller */,
 				491469521C3F5504001C14A2 /* AppDelegate.swift */,
 				491469581C3F5504001C14A2 /* Main.storyboard */,
 				4914695B1C3F5504001C14A2 /* Images.xcassets */,
 				4914695D1C3F5504001C14A2 /* LaunchScreen.xib */,
+				4966C0FD1C3F6CC200F62F7A /* Framework */,
 				491469501C3F5504001C14A2 /* Supporting Files */,
 				4966C1121C3F6E9000F62F7A /* RIVA-Bridging-Header.h */,
 			);
@@ -137,6 +171,18 @@
 		491469501C3F5504001C14A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C049B07B1C40587600C0E2A9 /* myPill.txt */,
+				C049B07C1C40587600C0E2A9 /* cancc.png */,
+				C049B07D1C40587600C0E2A9 /* redheart.ico */,
+				C049B07E1C40587600C0E2A9 /* okok.png */,
+				C049B07F1C40587600C0E2A9 /* greyheart.png */,
+				C049B0801C40587600C0E2A9 /* Dogs.mp3 */,
+				C049B0811C40587600C0E2A9 /* Phantom.mp3 */,
+				C049B0821C40587600C0E2A9 /* Summer.mp3 */,
+				C049B0831C40587600C0E2A9 /* Truth.mp3 */,
+				C049B0841C40587600C0E2A9 /* Whistle.mp3 */,
+				C049B0851C40587600C0E2A9 /* clo.png */,
+				C049B0861C40587600C0E2A9 /* cancel.png */,
 				4966C1151C3F810500F62F7A /* UIViewControllerExtension.swift */,
 				491469511C3F5504001C14A2 /* Info.plist */,
 			);
@@ -165,7 +211,8 @@
 			children = (
 				4966C0F31C3F6AC400F62F7A /* LogInViewController.swift */,
 				4966C0F51C3F6ADE00F62F7A /* SignUpViewController.swift */,
-				491469541C3F5504001C14A2 /* FirstViewController.swift */,
+				C049B0741C40578E00C0E2A9 /* AlarmViewController.swift */,
+				C049B0751C40578E00C0E2A9 /* SetUpAlarmViewController.swift */,
 				4966C0F71C3F6B0F00F62F7A /* SettingViewController.swift */,
 			);
 			name = Controller;
@@ -188,6 +235,23 @@
 				4966C0F91C3F6CBC00F62F7A /* Bolts.framework */,
 			);
 			name = Framework;
+			sourceTree = "<group>";
+		};
+		C049B06F1C40575300C0E2A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C049B0721C40576D00C0E2A9 /* HealthManager.swift */,
+				C049B0701C40576000C0E2A9 /* Report.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C049B0781C40579500C0E2A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C049B0791C40579E00C0E2A9 /* AnalogClock.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +334,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C049B08C1C40587600C0E2A9 /* Dogs.mp3 in Resources */,
+				C049B0891C40587600C0E2A9 /* redheart.ico in Resources */,
+				C049B08D1C40587600C0E2A9 /* Phantom.mp3 in Resources */,
+				C049B0921C40587600C0E2A9 /* cancel.png in Resources */,
 				4914695A1C3F5504001C14A2 /* Main.storyboard in Resources */,
+				C049B0911C40587600C0E2A9 /* clo.png in Resources */,
+				C049B08A1C40587600C0E2A9 /* okok.png in Resources */,
+				C049B08B1C40587600C0E2A9 /* greyheart.png in Resources */,
+				C049B0901C40587600C0E2A9 /* Whistle.mp3 in Resources */,
+				C049B08F1C40587600C0E2A9 /* Truth.mp3 in Resources */,
 				4914695F1C3F5504001C14A2 /* LaunchScreen.xib in Resources */,
 				4914695C1C3F5504001C14A2 /* Images.xcassets in Resources */,
+				C049B0881C40587600C0E2A9 /* cancc.png in Resources */,
+				C049B0871C40587600C0E2A9 /* myPill.txt in Resources */,
+				C049B08E1C40587600C0E2A9 /* Summer.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,10 +368,14 @@
 			files = (
 				4966C0F81C3F6B0F00F62F7A /* SettingViewController.swift in Sources */,
 				4966C0F41C3F6AC400F62F7A /* LogInViewController.swift in Sources */,
+				C049B0771C40578E00C0E2A9 /* SetUpAlarmViewController.swift in Sources */,
+				C049B0711C40576000C0E2A9 /* Report.swift in Sources */,
 				4966C1161C3F810500F62F7A /* UIViewControllerExtension.swift in Sources */,
 				491469531C3F5504001C14A2 /* AppDelegate.swift in Sources */,
-				491469551C3F5504001C14A2 /* FirstViewController.swift in Sources */,
+				C049B0761C40578E00C0E2A9 /* AlarmViewController.swift in Sources */,
+				C049B07A1C40579E00C0E2A9 /* AnalogClock.swift in Sources */,
 				4966C0F61C3F6ADF00F62F7A /* SignUpViewController.swift in Sources */,
+				C049B0731C40576D00C0E2A9 /* HealthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
