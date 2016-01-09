@@ -185,7 +185,7 @@ class AnalogClock: UIView {
         // add the circle to the context
         CGContextAddArc(ctx, CGRectGetMidX(rect), CGRectGetMidY(rect), rad, 0, endAngle, 1)
         // set fill color
-        CGContextSetFillColorWithColor(ctx,UIColor.lightGrayColor().CGColor)
+        CGContextSetFillColorWithColor(ctx,UIColor.grayColor().CGColor)
         // set stroke color
         CGContextSetStrokeColorWithColor(ctx,UIColor.blackColor().CGColor)
         // set line width

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RbW-Hn-2kb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RbW-Hn-2kb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -340,6 +340,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.099999999999999686" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="122104uxh3kw6vz3ab3253.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c2j-Yp-o8D">
+                                <rect key="frame" x="34" y="-15" width="457" height="551"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNt-02-sb7">
                                 <rect key="frame" x="16" y="28" width="64" height="56"/>
                                 <constraints>
@@ -403,14 +406,18 @@
                             <constraint firstItem="dNt-02-sb7" firstAttribute="top" secondItem="uRH-lN-uun" secondAttribute="bottom" constant="8" symbolic="YES" id="EeF-0v-dgC"/>
                             <constraint firstAttribute="centerX" secondItem="jQ6-Sn-9Fv" secondAttribute="centerX" id="F6o-8f-c9g"/>
                             <constraint firstAttribute="centerX" secondItem="3vv-ji-G8h" secondAttribute="centerX" id="FnC-GX-v4R"/>
+                            <constraint firstItem="c2j-Yp-o8D" firstAttribute="leading" secondItem="P9H-dm-WhH" secondAttribute="leadingMargin" constant="-16" id="Mni-oF-3Gh"/>
                             <constraint firstItem="fEG-pF-AhT" firstAttribute="top" secondItem="500-Zp-qDD" secondAttribute="bottom" constant="8" symbolic="YES" id="P18-zZ-LNY"/>
                             <constraint firstItem="DKL-b8-mUm" firstAttribute="top" secondItem="uRH-lN-uun" secondAttribute="bottom" constant="8" symbolic="YES" id="Y7B-S3-x4G"/>
                             <constraint firstItem="jQ6-Sn-9Fv" firstAttribute="trailing" secondItem="P9H-dm-WhH" secondAttribute="trailingMargin" id="bgc-Q2-tA5"/>
                             <constraint firstItem="fEG-pF-AhT" firstAttribute="trailing" secondItem="P9H-dm-WhH" secondAttribute="trailingMargin" id="dZY-Rb-YNb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c2j-Yp-o8D" secondAttribute="trailing" constant="-16" id="kBW-7F-Idn"/>
                             <constraint firstItem="500-Zp-qDD" firstAttribute="top" secondItem="uRH-lN-uun" secondAttribute="bottom" constant="8" symbolic="YES" id="lKx-5f-mct"/>
                             <constraint firstItem="jQ6-Sn-9Fv" firstAttribute="leading" secondItem="P9H-dm-WhH" secondAttribute="leadingMargin" id="pry-Rt-X3A"/>
                             <constraint firstItem="hpx-Lu-mDc" firstAttribute="top" secondItem="EJr-n3-O2D" secondAttribute="bottom" constant="8" id="qlj-f2-OTn"/>
                             <constraint firstItem="jQ6-Sn-9Fv" firstAttribute="top" secondItem="DKL-b8-mUm" secondAttribute="bottom" constant="8" symbolic="YES" id="qmo-aG-m8c"/>
+                            <constraint firstItem="hpx-Lu-mDc" firstAttribute="top" secondItem="c2j-Yp-o8D" secondAttribute="bottom" id="sVN-bO-NDN"/>
+                            <constraint firstItem="c2j-Yp-o8D" firstAttribute="top" secondItem="uRH-lN-uun" secondAttribute="bottom" id="t3H-be-VBB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="500-Zp-qDD" secondAttribute="trailing" id="urX-LH-NcX"/>
                             <constraint firstAttribute="centerX" secondItem="fEG-pF-AhT" secondAttribute="centerX" constant="60" id="wrW-ml-OCD"/>
                         </constraints>
@@ -435,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EpS-eL-5HO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="-476"/>
+            <point key="canvasLocation" x="1012" y="-476"/>
         </scene>
         <!--Set Up Alarm View Controller-->
         <scene sceneID="wS7-5s-Tdq">
@@ -446,17 +453,20 @@
                         <viewControllerLayoutGuide type="bottom" id="goP-0Y-Ck2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F19-qV-Y0C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="122104uxh3kw6vz3ab3253.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MMJ-WI-C3E">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Ringtone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unu-jG-l6o">
-                                <rect key="frame" x="76" y="249" width="224" height="38"/>
+                                <rect key="frame" x="188" y="249" width="224" height="38"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="300" translatesAutoresizingMaskIntoConstraints="NO" id="pJa-Cr-6R4">
-                                <rect key="frame" x="28" y="274" width="320" height="162"/>
+                                <rect key="frame" x="140" y="274" width="320" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="OJD-cT-ADy"/>
                                 </constraints>
@@ -466,7 +476,7 @@
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Alarm Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLZ-q0-ZRQ">
-                                <rect key="frame" x="65" y="53" width="246" height="38"/>
+                                <rect key="frame" x="177" y="53" width="246" height="38"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
@@ -474,7 +484,7 @@
                                 </variation>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ncm-sR-nsg">
-                                <rect key="frame" x="36" y="88" width="303" height="162"/>
+                                <rect key="frame" x="36" y="88" width="528" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="Ehq-hi-5nJ"/>
                                 </constraints>
@@ -486,7 +496,7 @@
                                 </variation>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="300" horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="600" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6E4-Hu-VvK">
-                                <rect key="frame" x="172" y="495" width="32" height="32"/>
+                                <rect key="frame" x="284" y="495" width="32" height="32"/>
                                 <state key="normal" image="check.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -506,10 +516,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MMJ-WI-C3E" firstAttribute="top" secondItem="13p-Cd-L7n" secondAttribute="bottom" id="13k-75-gIe"/>
                             <constraint firstItem="ZAr-3n-M95" firstAttribute="bottom" secondItem="13p-Cd-L7n" secondAttribute="top" constant="16" id="3Nh-jV-PoZ"/>
+                            <constraint firstItem="MMJ-WI-C3E" firstAttribute="trailing" secondItem="F19-qV-Y0C" secondAttribute="trailingMargin" constant="-16" id="AOS-kh-iv6"/>
                             <constraint firstItem="ncm-sR-nsg" firstAttribute="top" secondItem="DLZ-q0-ZRQ" secondAttribute="bottom" constant="18" id="ESY-jJ-jZ9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MMJ-WI-C3E" secondAttribute="trailing" constant="-16" id="GaN-Ga-WiC"/>
                             <constraint firstAttribute="centerX" secondItem="pJa-Cr-6R4" secondAttribute="centerX" id="HHS-NK-hNS"/>
                             <constraint firstAttribute="centerX" secondItem="ncm-sR-nsg" secondAttribute="centerX" id="IM4-QG-e2d"/>
+                            <constraint firstItem="goP-0Y-Ck2" firstAttribute="top" secondItem="MMJ-WI-C3E" secondAttribute="bottom" id="KOP-At-xh1"/>
                             <constraint firstItem="unu-jG-l6o" firstAttribute="top" secondItem="ncm-sR-nsg" secondAttribute="bottom" constant="20" id="Lr6-d3-V0i"/>
                             <constraint firstItem="DLZ-q0-ZRQ" firstAttribute="top" secondItem="13p-Cd-L7n" secondAttribute="bottom" constant="33" id="Ou3-qF-Nbz"/>
                             <constraint firstItem="6E4-Hu-VvK" firstAttribute="top" secondItem="pJa-Cr-6R4" secondAttribute="bottom" priority="900" constant="80" id="RB6-uq-fza"/>
@@ -519,16 +533,17 @@
                             <constraint firstItem="pJa-Cr-6R4" firstAttribute="top" secondItem="unu-jG-l6o" secondAttribute="bottom" constant="8" symbolic="YES" id="azO-sM-y2j"/>
                             <constraint firstAttribute="centerX" secondItem="DLZ-q0-ZRQ" secondAttribute="centerX" id="dhC-Yt-BFd"/>
                             <constraint firstAttribute="centerX" secondItem="6E4-Hu-VvK" secondAttribute="centerX" id="fEZ-FI-NuV"/>
+                            <constraint firstItem="MMJ-WI-C3E" firstAttribute="leading" secondItem="F19-qV-Y0C" secondAttribute="leadingMargin" constant="-16" id="kOR-KI-tQg"/>
                             <constraint firstItem="ncm-sR-nsg" firstAttribute="leading" secondItem="F19-qV-Y0C" secondAttribute="leadingMargin" constant="20" id="qmI-mB-Da1"/>
                             <constraint firstAttribute="centerX" secondItem="unu-jG-l6o" secondAttribute="centerX" id="xdJ-CA-bCa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="AOS-kh-iv6"/>
                                 <exclude reference="3Nh-jV-PoZ"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="datePicker" destination="ncm-sR-nsg" id="sgk-JL-3ie"/>
                         <outlet property="musicTab" destination="pJa-Cr-6R4" id="TxC-dB-DvF"/>
@@ -538,7 +553,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k84-lB-heb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="XtT-7q-WlC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1589.5" y="-461.5"/>
+            <point key="canvasLocation" x="1682" y="-476"/>
         </scene>
         <!--Pills-->
         <scene sceneID="nCo-iZ-4Nj">
@@ -561,6 +576,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="122104uxh3kw6vz3ab3253.jpg" width="2000" height="2000"/>
         <image name="Icon-60.png" width="60" height="60"/>
         <image name="Pill Filled-50" width="25" height="25"/>
         <image name="Settings-50" width="25" height="25"/>

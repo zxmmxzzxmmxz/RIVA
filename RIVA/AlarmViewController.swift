@@ -119,6 +119,7 @@ class AlarmViewController: UIViewController {
         audioPlayer.prepareToPlay()
         messageLabel.text=""
         heartbutton.hidden = true
+        
         //print("here3")
     }
     
