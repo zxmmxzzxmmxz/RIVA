@@ -9,7 +9,7 @@
         <!--Pills-->
         <scene sceneID="Rmk-Ak-f5I">
             <objects>
-                <tableViewController id="B4j-G8-CST" sceneMemberID="viewController">
+                <tableViewController id="B4j-G8-CST" customClass="MyPillTableViewController" customModule="RIVA" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4ob-kM-Adu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,11 +27,56 @@
                             <outlet property="delegate" destination="B4j-G8-CST" id="1Dt-zV-zbM"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Pills" image="Pill Filled-50" id="N8Q-bI-7pk"/>
+                    <navigationItem key="navigationItem" title="Pills" id="fLG-Kd-TY8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gCE-GG-VAe">
+                            <connections>
+                                <action selector="searchPillTapped:" destination="B4j-G8-CST" id="HDg-73-C0j"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Ylv-0L-NcY" kind="popoverPresentation" identifier="gotoSearch" popoverAnchorBarButtonItem="gCE-GG-VAe" id="dz8-i0-Mys">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOZ-UY-bAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934" y="-1650"/>
+            <point key="canvasLocation" x="1565" y="-1650"/>
+        </scene>
+        <!--Search Pill Table View Controller-->
+        <scene sceneID="cL2-2N-RCu">
+            <objects>
+                <tableViewController id="Ylv-0L-NcY" customClass="SearchPillTableViewController" customModule="RIVA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="81B-gR-sjw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" textLabel="Zyc-7o-9fn" style="IBUITableViewCellStyleDefault" id="nlf-ry-ChW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nlf-ry-ChW" id="oDq-76-8Qm">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zyc-7o-9fn">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ylv-0L-NcY" id="dd7-gv-Uvb"/>
+                            <outlet property="delegate" destination="Ylv-0L-NcY" id="Q4g-jy-api"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98p-LC-723" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2201" y="-1650"/>
         </scene>
         <!--Settings-->
         <scene sceneID="wg7-f3-ORb">
@@ -274,7 +319,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="B4j-G8-CST" kind="relationship" relationship="viewControllers" id="4H5-EX-4fA"/>
+                        <segue destination="9Nk-IG-iYC" kind="relationship" relationship="viewControllers" id="4H5-EX-4fA"/>
                         <segue destination="dRG-dc-jDC" kind="relationship" relationship="viewControllers" id="e40-HD-Rl9"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
@@ -308,13 +353,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--:--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="500-Zp-qDD">
                                 <rect key="frame" x="552" y="28" width="32" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Alarm:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKL-b8-mUm">
                                 <rect key="frame" x="455" y="28" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="300" verticalHuggingPriority="300" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="jQ6-Sn-9Fv" customClass="AnalogClock" customModule="RIVA" customModuleProvider="target">
@@ -334,7 +379,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vv-ji-G8h">
                                 <rect key="frame" x="300" y="479" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEG-pF-AhT">
@@ -494,6 +539,25 @@
                 <exit id="XtT-7q-WlC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1589.5" y="-461.5"/>
+        </scene>
+        <!--Pills-->
+        <scene sceneID="nCo-iZ-4Nj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Nk-IG-iYC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pills" image="Pill Filled-50" id="N8Q-bI-7pk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z8k-VF-yeN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B4j-G8-CST" kind="relationship" relationship="rootViewController" id="wff-eX-oqa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQT-xO-3wt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="-1650"/>
         </scene>
     </scenes>
     <resources>
