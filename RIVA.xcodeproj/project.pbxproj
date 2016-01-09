@@ -49,6 +49,8 @@
 		C049B0961C40641100C0E2A9 /* timer.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B0951C40641100C0E2A9 /* timer.png */; };
 		C049B0981C40649000C0E2A9 /* icon_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B0971C40649000C0E2A9 /* icon_close.png */; };
 		C049B09A1C40655C00C0E2A9 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C049B0991C40655C00C0E2A9 /* Icon-60@2x.png */; };
+		C0B8F8B01C41B6CA008EF89E /* 20d58PICxvy_1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0B8F8AF1C41B6CA008EF89E /* 20d58PICxvy_1024.jpg */; };
+		C0B8F8B21C41B843008EF89E /* 122104uxh3kw6vz3ab3253.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0B8F8B11C41B843008EF89E /* 122104uxh3kw6vz3ab3253.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		C049B0951C40641100C0E2A9 /* timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer.png; sourceTree = "<group>"; };
 		C049B0971C40649000C0E2A9 /* icon_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_close.png; sourceTree = "<group>"; };
 		C049B0991C40655C00C0E2A9 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		C0B8F8AF1C41B6CA008EF89E /* 20d58PICxvy_1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20d58PICxvy_1024.jpg; sourceTree = "<group>"; };
+		C0B8F8B11C41B843008EF89E /* 122104uxh3kw6vz3ab3253.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 122104uxh3kw6vz3ab3253.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,8 @@
 		491469501C3F5504001C14A2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C0B8F8AF1C41B6CA008EF89E /* 20d58PICxvy_1024.jpg */,
+				C0B8F8B11C41B843008EF89E /* 122104uxh3kw6vz3ab3253.jpg */,
 				C049B0991C40655C00C0E2A9 /* Icon-60@2x.png */,
 				C049B07B1C40587600C0E2A9 /* myPill.txt */,
 				C049B07C1C40587600C0E2A9 /* cancc.png */,
@@ -315,6 +321,7 @@
 				TargetAttributes = {
 					4914694C1C3F5504001C14A2 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = BEX9M2ZJU8;
 					};
 					491469631C3F5504001C14A2 = {
 						CreatedOnToolsVersion = 6.4;
@@ -353,10 +360,12 @@
 				4914695A1C3F5504001C14A2 /* Main.storyboard in Resources */,
 				C049B0941C40634000C0E2A9 /* check.png in Resources */,
 				C049B0911C40587600C0E2A9 /* clo.png in Resources */,
+				C0B8F8B01C41B6CA008EF89E /* 20d58PICxvy_1024.jpg in Resources */,
 				C049B08A1C40587600C0E2A9 /* okok.png in Resources */,
 				C049B08B1C40587600C0E2A9 /* greyheart.png in Resources */,
 				C049B0901C40587600C0E2A9 /* Whistle.mp3 in Resources */,
 				C049B0961C40641100C0E2A9 /* timer.png in Resources */,
+				C0B8F8B21C41B843008EF89E /* 122104uxh3kw6vz3ab3253.jpg in Resources */,
 				C049B08F1C40587600C0E2A9 /* Truth.mp3 in Resources */,
 				4914695F1C3F5504001C14A2 /* LaunchScreen.xib in Resources */,
 				4914695C1C3F5504001C14A2 /* Images.xcassets in Resources */,
@@ -521,13 +530,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RIVA",
 				);
 				INFOPLIST_FILE = RIVA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RIVA/RIVA-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -538,13 +551,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RIVA",
 				);
 				INFOPLIST_FILE = RIVA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RIVA/RIVA-Bridging-Header.h";
 			};
 			name = Release;
