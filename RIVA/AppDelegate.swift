@@ -24,6 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("FD4MoKctrVhWWWHUkO5Lk6RhJImVIGvwTl4xZ0Ak", clientKey: "zAAL3zqfyeWMsNZ0ZQEW6oHaB5EORH5h0iYkC2TG")
         
         
+        let types:UIUserNotificationType = UIUserNotificationType.Alert | UIUserNotificationType.Sound
+        let mySetting:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(mySetting)
+        
+        
         return true
     }
 
