@@ -13,7 +13,7 @@ Prerequisite:
     Riva requires iOS 8.0 or above, watch OS 4.0 or above.
 
 Major features: 
-    Intelligent alarm:
+    *Intelligent alarm:
         Riva intelligent alarm supports users to wake up refreshingly and get ready for the day. 
         The smart alarm contains four feature:           
         
