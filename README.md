@@ -1,6 +1,7 @@
 # RIVA
 Description:
-    Riva is an iOS mobile app with apple watch component.
+   
+   Riva is an iOS mobile app with apple watch component.
     
     Riva is designed for non-morning person wanted to shift his daily schedule, especially 
     for users who do not have set or adjusted to work/school schedule after vacation. This app 
