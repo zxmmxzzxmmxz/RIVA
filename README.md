@@ -21,12 +21,12 @@ Major features:
         The smart alarm contains four feature:           
         
            Heart Rate and Sleep Movement Tracking:
-                The Heart Rate and Sleep Movement tracker will detect user's current sleep status. 
-                Based on the status, the tracker will trigger the wake up alarm at user's lightest
+                The Heart Rate and Sleep Movement tracker will detect the user's current sleep status. 
+                Based on the status, the tracker will trigger the wake up alarm at the user's lightest
                 sleeping stage.
             
            Light and Sound Sensor:
-                Light and Sound senser supports user to find his/her the perfect sleep environment.
+                Light and Sound sensor supports user to find his/her the perfect sleep environment.
             
            Wake Up Quiz:
                 A short quiz after the morning alarm to wake you up and get your mind working.
@@ -37,6 +37,6 @@ Major features:
         
     Medicine lookup
     
-        RIVA comes with an medicine lookup module. The module provides a user a tool to find the drug 
+        RIVA comes with a medicine lookup module. The module provides a user a tool to find the drug 
         description of any Medicine based on its labeled SSN number. The data of the medicine is pulled
         from MDA official website.
