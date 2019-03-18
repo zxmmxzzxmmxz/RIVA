@@ -19,9 +19,8 @@ Intelligent alarm:
     The smart alarm contains four feature:           
     
        Heart Rate and Sleep Movement Tracking:
-            The Heart Rate and Sleep Movement tracker will detect the user's current sleep status. 
-            Based on the status, the tracker will trigger the wake up alarm at the user's lightest
-            sleeping stage.
+            The heart rate and sleep movement tracker will detect the user's current sleep state.
+            The tracker will trigger a wake-up alert during the user's lightest sleep phase based on the state.
         
        Light and Sound Sensor:
             Light and Sound sensor supports user to find his/her the perfect sleep environment.
