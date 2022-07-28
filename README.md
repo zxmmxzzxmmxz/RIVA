@@ -34,6 +34,4 @@ Intelligent alarm:
     
 Medicine lookup
 
-    RIVA comes with a medicine lookup module. The module provides a user a tool to find the drug 
-    description of any Medicine based on its labeled SSN number. The data of the medicine is pulled
-    from MDA official website.
+    RIVA comes with a drug lookup module. This module provides users with a tool to look up the drug               description of any drug based on its tagged SSN number. The 	drug data comes from the MDA official             website.
